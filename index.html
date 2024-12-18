@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="num">
+    <input type="button" onclick="vv()" value="click me" class="s">
+    <p id="ans"></p>
+    <script>
+        function vv()
+        {
+            var n=document.getElementById("num").value;
+            var a=document.getElementById("ans");
+            var f=false;
+            try
+            {
+                if(n=="") throw "empty";
+                if(n=20) throw "out of range";
+            }
+            catch(error)
+            {
+                a.innerHTML=error;
+                var f=true;
+
+            }
+            finally
+            {
+                if(f==false)
+            {
+                var s=''
+                for(var i=1;i<=n;i++)
+                {
+                    s+i+""
+                }
+                a.innerHTML= s
+            
+            }
+            }
+
+            
+            
+        }
+    </script>
+    
+</body>
+</html>
